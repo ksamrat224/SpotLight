@@ -1,3 +1,4 @@
+import { COLORS } from "@/constants/theme";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Tabs } from "expo-router";
 import React from "react";
@@ -7,6 +8,17 @@ const TabLayout = () => {
     <Tabs
       screenOptions={{
         tabBarShowLabel: false,
+        headerShown: false,
+        tabBarActiveTintColor: COLORS.primary,
+        tabBarInactiveTintColor: COLORS.grey,
+        tabBarStyle:{
+            backgroundColor:"black",
+            borderTopWidth: 0,
+            position: "absolute",
+            elevation: 0,
+            height: 40,
+            paddingBottom:8,
+        }
       }}
     >
       <Tabs.Screen
@@ -29,7 +41,7 @@ const TabLayout = () => {
         name="create"
         options={{
           tabBarIcon: ({ size, color }) => (
-            <Ionicons name="add-circle" size={size} color={color} />
+            <Ionicons name="add-circle" size={size} color={COLORS.primary} />
           ),
         }}
       />
