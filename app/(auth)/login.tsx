@@ -2,7 +2,7 @@ import { COLORS } from "@/constants/theme";
 import { styles } from "@/styles/auth.styles";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import React from "react";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 const login = () => {
   return (
@@ -16,6 +16,14 @@ const login = () => {
         <Text style={styles.tagline}>
           Discover and share your favorite moments
         </Text>
+      </View>
+
+      <View style={styles.illustrationContainer}>
+        <Image
+          source={require("../../assets/images/auth_bg.png")}
+          style={styles.illustration}
+          resizeMode="cover"
+        />
       </View>
     </View>
   );
